@@ -23,7 +23,7 @@ export class PictionaryComponent implements OnInit {
   public category: string = "Gire la Ruleta";
   public newCategory: boolean = false;
   public viewWinner: boolean = false;
-  public wordRandom: string = '';
+  public wordRandom: string = 'Gire la Ruleta...';
   public teamwinner: string = '';
 
   constructor(private pictonaryService: PictionaryService) { }
