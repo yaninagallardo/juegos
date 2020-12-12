@@ -1,0 +1,23 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}
+.vara {
+	height: 70px;
+	width: 20px;
+	background-color: rgb(37, 202, 22);
+	margin: auto;
+	position: relative;
+	top: 15px;
+	border-radius: 0px 0px 8px 8px;
+	border: 1px solid #000;
+	border-top: 5px solid #000;
+	z-index: 1000;
+}
+
+img {
+	z-index: 100;
+	transition: all 5s;
+	width: 60%;
+} 
