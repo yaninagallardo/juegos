@@ -7,11 +7,11 @@
     <app-popup-time #popuptime class="popup" (timeFinished)="timeFinished($event)" [category]="category"
         *ngIf="isStartDrawing"></app-popup-time>
     <div class="row">
-        <div class="col-6">
+        <div class="col-lg-6 col-sm-12">
             <app-roulette class="rulette" (finishTurn)="turnResult($event)" (startTurn)="setResult($event)">
             </app-roulette>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6 col-sm-12">
             <div class="row">
                 <div class="col-3"></div>
                 <div class="col-6 mt-5">
