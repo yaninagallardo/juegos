@@ -23,7 +23,7 @@ export class PopupTimeComponent implements OnInit {
     this.timeOver();
   }
 
-  @Input() timeOver() {
+  timeOver() {
     let timeDefined = (this.timeOut * 10) + 5;
     let interval = setInterval(() => {
       this.timeOut--;
@@ -36,11 +36,9 @@ export class PopupTimeComponent implements OnInit {
     }, timeDefined);
   }
 
-
-
-  winner(){
+  winners(){
     let points = 0;
-    if(this.timeOut < 46){
+    if(this.timeOut > 46){
       points = 2;
     } else{
       points = 1;

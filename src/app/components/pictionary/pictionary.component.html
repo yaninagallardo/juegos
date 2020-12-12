@@ -15,14 +15,14 @@
             <div class="row">
                 <div class="col-3"></div>
                 <div class="col-6 mt-5">
-                    <app-teampoints></app-teampoints>
+                    <app-teampoints #teamspoints (teamWinner)="winnerteam($event)"></app-teampoints>
                 </div>
-                <div class="col-12 d-flex flex-column text-center info mt-4">
+                <div class="col-12 d-flex flex-column text-center info mt-1">
                     <span class="font-36">{{category}}</span>
                     <div class="d-flex flex-column text-center">
                         <span><strong>Palabra: </strong></span>
 
-                        <span *ngIf="isViewActive" class="me-4">{{wordRandom}} Puto el que lee</span>
+                        <span *ngIf="isViewActive" class="me-4 text-capitalize">{{wordRandom}}</span>
                         <span *ngIf="!isViewActive" class="me-4">*********</span>
 
                         <div class="d-flex justify-content-center">
@@ -37,4 +37,7 @@
             </div>
         </div>
     </div>
+</div>
+<div *ngIf="viewWinner" class="spopup">
+   <span>{{teamwinner}}</span> 
 </div>

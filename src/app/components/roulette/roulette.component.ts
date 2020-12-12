@@ -39,19 +39,19 @@ export class RouletteComponent implements OnInit {
     setTimeout(() => {
       switch (true) {
         case valor > 0 && valor <= 90:
-          console.log("accion");
+          // console.log("accion");
         this.finishTurn.emit(action);
         break;
         case valor > 90 && valor <= 180:
-          console.log("dificil");
+          // console.log("dificil");
           this.finishTurn.emit(hard);
           break;
           case valor > 180 && valor <= 270:
-            console.log("animal");
+            // console.log("animal");
             this.finishTurn.emit(animals);
             break;
             case valor > 270 && valor <= 360:
-              console.log("objeto");
+              // console.log("objeto");
               this.finishTurn.emit(objects);
           break;
       }

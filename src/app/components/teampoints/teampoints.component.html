@@ -1,21 +1,18 @@
-<div class="mb-4">
-    <span >Juega Equipo: </span>
-    <span *ngIf="team1.turned">Equipo 1</span>
-    <span *ngIf="team2.turned">Equipo 2</span>
-  
-  </div>
-  
-  <table class="text-center table table-dark table-striped">
-      <thead>
-          <tr>
-            <th scope="col">Equipo 1</th>
-            <th scope="col">Equipo 2</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{team1.points}} / 10</td>
-            <td>{{team2.points}} / 10</td>
-          </tr>
-        </tbody>
-    </table>
+<table class="text-center table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Equipo 1</th>
+      <th scope="col">Equipo 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{team1.points}} / {{pointMax}}</td>
+      <td>{{team2.points}} / {{pointMax}}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="turn mt-4 text-center">
+  <span *ngIf="team1.turned">Equipo 1</span>
+  <span *ngIf="team2.turned">Equipo 2</span>
+</div>
