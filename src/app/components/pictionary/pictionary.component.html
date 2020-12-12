@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-12">
+            <h1>Pictionary</h1>
+        </div>
+    </div>
+    <app-popup-time #popuptime class="popup" (timeFinished)="timeFinished($event)" [category]="category"
+        *ngIf="isStartDrawing"></app-popup-time>
+    <div class="row">
+        <div class="col-6">
+            <app-roulette class="rulette" (finishTurn)="turnResult($event)" (startTurn)="setResult($event)">
+            </app-roulette>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6 mt-5">
+                    <app-teampoints></app-teampoints>
+                </div>
+                <div class="col-12 d-flex flex-column text-center info mt-4">
+                    <span class="font-36">{{category}}</span>
+                    <div class="d-flex flex-column text-center">
+                        <span><strong>Palabra: </strong></span>
+
+                        <span *ngIf="isViewActive" class="me-4">{{wordRandom}} Puto el que lee</span>
+                        <span *ngIf="!isViewActive" class="me-4">*********</span>
+
+                        <div class="d-flex justify-content-center">
+                            <button (mousedown)="activeView($event)" (mouseup)="desactiveView($event)"
+                                class="button-eye"><i class="fas fa-eye"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-flex justify-content-center mt-5">
+                    <button class="button-start" [disabled]="!newCategory" (click)="startDrawing()">Comenzar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

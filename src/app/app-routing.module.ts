@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RouletteComponent } from './components/roulette/roulette.component';
+import { PictionaryComponent } from './components/pictionary/pictionary.component';
+
 
 const routes: Routes = [
-  { path: '', component: RouletteComponent}
+  { path: '', component: PictionaryComponent}
 ];
 
 @NgModule({
