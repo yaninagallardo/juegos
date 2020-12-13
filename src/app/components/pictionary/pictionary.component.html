@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container-fluid body-pictionary">
     <div class="row text-center">
-        <div class="col-12">
-            <h1>Pictionary</h1>
+        <div class="col-12 ">
+            <span class="multicolortext">PICTIONARY </span>
         </div>
     </div>
     <app-popup-time #popuptime class="popup" (timeFinished)="timeFinished($event)" [category]="category"
@@ -25,13 +25,14 @@
                         <span *ngIf="isViewActive" class="me-4 text-capitalize">{{wordRandom}}</span>
                         <span *ngIf="!isViewActive" class="me-4">*********</span>
 
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-center col-12">
                             <button (mousedown)="activeView($event)" (mouseup)="desactiveView($event)"
+                                (touchstart)="activeView($event)" (touchend)="desactiveView($event)"
                                 class="button-eye"><i class="fas fa-eye"></i></button>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 d-flex justify-content-center mt-5">
+                <div class="col-12 d-flex justify-content-center my-5 ">
                     <button class="button-start" [disabled]="!newCategory" (click)="startDrawing()">Comenzar</button>
                 </div>
             </div>
@@ -39,5 +40,5 @@
     </div>
 </div>
 <div *ngIf="viewWinner" class="spopup">
-   <span>{{teamwinner}}</span> 
+    <span>{{teamwinner}}</span>
 </div>
