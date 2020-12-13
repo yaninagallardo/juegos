@@ -1,0 +1,22 @@
+<div class="content-principal popup">
+    <div class="principal-content">
+        <div class=" d-flex flex-column">
+            <div class="d-flex flex-row">
+                <span *ngIf="isViewActive" class="me-4 text-capitalize">{{movie}}</span>
+                <span *ngIf="!isViewActive" class="me-4">*********</span>
+
+                <div class="">
+                    <button (mousedown)="activeView($event)" (mouseup)="desactiveView($event)"
+                        (touchstart)="activeView($event)" (touchend)="desactiveView($event)" class="button-eye"><i
+                            class="fas fa-eye"></i></button>
+                </div>
+
+            </div>
+            <span class="text-center" style="color: red;">{{timeOut}} Seg.</span>
+            <div class="d-flex flex-row">
+                <button class="button-win win" (click)="winners()">Acertó</button>
+                <button class="button-win out" >Salir</button>
+            </div>
+        </div>
+    </div>
+</div>

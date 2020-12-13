@@ -1,0 +1,27 @@
+.popup{
+    background-color: rgba(61, 61, 59, 0.335);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+
+    .button-win{
+        width: 50%;
+        .win{
+            background-color: green;
+        }
+        .out {
+            background-color: red;
+        }
+    }
+
+    .principal-content{
+        background-color: cornsilk;
+        margin: 15% 25%;
+        height: 50%;
+        width: 50%;
+        position: relative;
+    }
+}

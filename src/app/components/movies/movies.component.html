@@ -1,17 +1,19 @@
-<div class="container-fluid body-pictionary">
+<div class="container-fluid body-movie">
     <div class="row text-center">
-        <div class="col-12 ">
-            <span class="multicolortext">PICTIONARY </span>
+        <div class="col-12">
+            <div >Movie</div>
+            <!-- <img class="movie-cartel" src="assets/img/movie.png" alt=""> -->
         </div>
     </div>
-    <app-popup-time #popuptime class="popup" (timeFinished)="timeFinished($event)" [category]="category"
-        *ngIf="isStartDrawing"></app-popup-time>
     <div class="row">
         <div class="col-lg-6 col-sm-12">
-            <app-roulette class="rulette" [rouletteType]="1" (finishTurn)="turnResult($event)" (startTurn)="setResult($event)">
+            <app-roulette class="rulette" [rouletteType]="2" >
             </app-roulette>
         </div>
-        <div class="col-lg-6 col-sm-12">
+        <div>
+            <app-popupmovie></app-popupmovie>
+        </div>
+        <!-- <div class="col-lg-6 col-sm-12">
             <div class="row">
                 <div class="col-3"></div>
                 <div class="col-6 mt-5">
@@ -36,9 +38,9 @@
                     <button class="button-start" [disabled]="!newCategory" (click)="startDrawing()">Comenzar</button>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
-<div *ngIf="viewWinner" class="spopup">
+<!-- <div *ngIf="viewWinner" class="spopup">
     <span>{{teamwinner}}</span>
-</div>
+</div> -->

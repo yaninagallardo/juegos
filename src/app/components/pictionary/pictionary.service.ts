@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { WordsESAction } from '../../files/words-ES-action';
-import { WordsESAnimals } from '../../files/words-ES-animals';
-import { WordsESHard } from '../../files/words-ES-hard';
-import { WordsESObjects } from '../../files/words-ES-objects';
+import { WordsESAction } from '../../files/words/words-ES-action';
+import { WordsESAnimals } from '../../files/words/words-ES-animals';
+import { WordsESHard } from '../../files/words/words-ES-hard';
+import { WordsESObjects } from '../../files/words/words-ES-objects';
 
 const action = "Acción";
 const objects = "Objeto";

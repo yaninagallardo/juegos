@@ -7,6 +7,8 @@ import { RouletteComponent } from './components/roulette/roulette.component';
 import { PopupTimeComponent } from './components/popup-time/popup-time.component';
 import { TeampointsComponent } from './components/teampoints/teampoints.component';
 import { PictionaryComponent } from './components/pictionary/pictionary.component';
+import { MoviesComponent } from './components/movies/movies.component';
+import { PopupmovieComponent } from './components/popupmovie/popupmovie.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { PictionaryComponent } from './components/pictionary/pictionary.componen
     RouletteComponent,
     PopupTimeComponent,
     TeampointsComponent,
-    PictionaryComponent
+    PictionaryComponent,
+    MoviesComponent,
+    PopupmovieComponent
   ],
   imports: [
     BrowserModule,
